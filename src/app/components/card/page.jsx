@@ -9,6 +9,9 @@ import { motion } from "framer-motion"
 
 
 export default function Card({details , reference}){
+
+    if (!details) return null
+    
     return(
             <motion.div drag dragConstraints={reference} whileDrag={{ scale: 1.1, backgroundColor: "#32CD32" }} className="w-[12em] text-white h-[14em] relative rounded-[1em] flex-shrink-0 bg-[#0000008f] overflow-hidden">
                 <div className="p-[1em]">
